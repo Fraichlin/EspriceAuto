@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ESPrice Auto</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'website/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'website/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'website/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>info@espriceauto.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <img class="img-fluid w-100" src="{% static 'website/img/logo3.png' %}" alt="">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="/" class="nav-item nav-link {% block activation1 %}{%endblock%}">Home</a>
+                    <a href="/#about" class="nav-item nav-link">About us</a>
+                    <a href="/prediction" class="nav-item nav-link {% block activation2 %}{%endblock%}">Price estimation</a>
+                    <a href="/statistics" class="nav-item nav-link {% block activation3 %}{%endblock%}">Statistics</a>
+                    <a href="/filter" class="nav-item nav-link {% block activation4 %}{%endblock%}">Filter</a>
+                    <a href="contact.html" class="nav-item nav-link">Comparator</a>
+                    <a href="/#contact" class="nav-item nav-link">Contact us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+
+    {% block main %}
+    {% endblock %}
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-6">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-primary mb-4">Get In Touch</h3>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Ariana, Tunis, TUNISIA</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope mr-2"></i>info@espriceauto.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-primary mb-4">Quick Links</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Price estimation</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Statistics</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Filter</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Comparator</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Newsletter</h3>
+                <p>Sign up to receive last information about our platform in terms of new cars ads and features</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">ESPrice Auto</a>. All Rights Reserved.
+
+				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'website/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'website/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'website/lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'website/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'website/mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'website/mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'website/js/main.js' %}"></script>
+
+    <script>
+    $(document).on('submit', '#post-form',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'{% url "prediction:submit_prediction" %}',
+            data:{
+                mark:$('#mark').val(),
+                model:$('#model').val(),
+                year:$('#year').val(),
+                mileage:$('#mileage').val(),
+                power:$('#power').val(),
+                energy:$('#energy').val(),
+                gearbox:$('#gearbox').val(),
+                color:$('#color').val(),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                action: 'post'
+            },
+            success:function(json) {
+                document.getElementById("prediction").innerHTML = json['price']
+                document.getElementById("mk").innerHTML = json['mark']
+                document.getElementById("md").innerHTML = json['model']
+                document.getElementById("yr").innerHTML = json['year']
+                document.getElementById("ml").innerHTML = json['mileage']
+                document.getElementById("pw").innerHTML = json['power']
+                document.getElementById("en").innerHTML = json['energy']
+                document.getElementById("cl").innerHTML = json['color']
+                document.getElementById("gx").innerHTML = json['gearbox']
+                document.getElementById("min_price").innerHTML = json['min_price']
+                document.getElementById("max_price").innerHTML = json['max_price']
+
+
+                data = json['ads']
+                for (var i = 1; i <= 3; i++) {
+                    $('#ads').append("<a href=" + data[i][3] + " target='_blank'><li class='list-group-item'>" +data[i][0]+" "+data[i][1]+" ,Adresse : "+data[i][2] +"</li></a><br>");
+
+                }
+            },
+            error : function(xhr,errmsg,err) {
+
+            }
+        });
+    });
+
+</script>
+<script>
+    $(document).on('change', '#mark',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'GET',
+            url:'{% url "prediction:load_model" %}',
+            data:{
+                mark:$('#mark').val(),
+                action: 'get'
+            },
+            success:function(json) {
+                $('#model_datalist').empty()
+                data = json['models']
+                var len = parseInt(json['len'])
+                for (var i = 1; i <= len; i++) {
+                    $('#model_datalist').append("<option value='" + data[i] + "'>");
+                }
+            },
+            error : function(xhr,errmsg,err) {
+
+            }
+        });
+    })
+</script>
+<script type="text/javascript" src="{% static 'website/js/echarts.min.js' %}"></script>
+
+       <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+
+            setTimeout(function () {
+
+                option = {
+                    legend: {},
+                    tooltip: {
+                        trigger: 'axis',
+                        showContent: false
+                    },
+                    dataset: {
+                        source: [
+                            ['product', ':2016', ':2017', ':2018', ':2019', ':2020',':2021'],
+                            ['Volkswagen', 1160, 1280, 1350, 1400, 1530,1800],
+                            ['Peugeot', 721, 800, 1038, 1121, 1230, 1360],
+                            ['Renault', 820, 910, 1080, 1204, 1340, 1400],
+                            ['Citroen', 582, 681, 792, 837, 920, 1090],
+
+                        ]
+                    },
+                    xAxis: {type: 'category'},
+                    yAxis: {gridIndex: 0},
+                    grid: {top: '55%'},
+                    series: [
+
+                        {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                        {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                        {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                        {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                        {
+                            type: 'pie',
+                            id: 'pie',
+                            radius: '30%',
+                            center: ['50%', '25%'],
+                            label: {
+                                formatter: '{b}: {@2016} ({d}%)'
+                            },
+                            encode: {
+                                itemName: 'product',
+                                value: '2016',
+                                tooltip: '2016'
+                            }
+                        }
+                    ]
+                };
+
+                myChart.on('updateAxisPointer', function (event) {
+                    var xAxisInfo = event.axesInfo[0];
+                    if (xAxisInfo) {
+                        var dimension = xAxisInfo.value + 1;
+                        myChart.setOption({
+                            series: {
+                                id: 'pie',
+                                label: {
+                                    formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+                                },
+                                encode: {
+                                    value: dimension,
+                                    tooltip: dimension
+                                }
+                            }
+                        });
+                    }
+                });
+
+                myChart.setOption(option);
+
+            });;
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+       </script>
+
+    <script >
+function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";
+        }
+    }
+}
+</script>
+
+</body>
+
+</html>

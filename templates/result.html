@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="container pt-5">
+        <div class="row">
+
+        <h1 class="text-warning">Prediction Results</h1>
+
+            <table class="table">
+                <thead>
+                <tr class="text-light">
+                    <th scope="col">#</th>
+                    <th scope="col">Sex</th>
+                    <th scope="col">Education</th>
+                    <th scope="col">Marriage</th>
+                    <th scope="col">Repayment Status in September, 2005</th>
+                    <th scope="col">Repayment Status in August, 2005</th>
+                    <th scope="col">Repayment Status in July, 2005</th>
+                    <th scope="col">Repayment Status in June, 2005</th>
+                    <th scope="col">Repayment Status in May, 2005</th>
+                    <th scope="col">Repayment Status in April, 2005</th>
+                    <th scope="col">Amount of bill statement in September, 2005</th>
+                    <th scope="col">Amount of bill statement in August, 2005</th>
+                    <th scope="col">Amount of bill statement in July, 2005</th>
+                    <th scope="col">Amount of bill statement in June, 2005</th>
+                    <th scope="col">Amount of bill statement in May, 2005</th>
+                    <th scope="col">Amount of bill statement in April, 2005</th>
+                    <th scope="col">Amount of previous payment in September, 2005</th>
+                    <th scope="col">Amount of previous payment in August, 2005</th>
+                    <th scope="col">Amount of previous payment in July, 2005</th>
+                    <th scope="col">Amount of previous payment in June, 2005</th>
+                    <th scope="col">Amount of previous payment in May, 2005</th>
+                    <th scope="col">Amount of previous payment in April, 2005</th>
+                    <th scope="col">Limit Balance</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Prediction</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for data in dataset %}
+                    <tr class="text-light">
+                        <th scope="row">{{ data.id }}</th>
+                        <td>{{ data.sex }}</td>
+                        <td>{{ data.education }}</td>
+                        <td>{{ data.marriage }}</td>
+                        <td>{{ data.pay_1 }}</td>
+                        <td>{{ data.pay_2 }}</td>
+                        <td>{{ data.pay_3 }}</td>
+                        <td>{{ data.pay_4 }}</td>
+                        <td>{{ data.pay_5 }}</td>
+                        <td>{{ data.pay_6 }}</td>
+                        <td>{{ data.bill_amt1 }}</td>
+                        <td>{{ data.bill_amt2 }}</td>
+                        <td>{{ data.bill_amt3 }}</td>
+                        <td>{{ data.bill_amt4 }}</td>
+                        <td>{{ data.bill_amt5 }}</td>
+                        <td>{{ data.bill_amt6 }}</td>
+                        <td>{{ data.pay_amt1 }}</td>
+                        <td>{{ data.pay_amt2 }}</td>
+                        <td>{{ data.pay_amt3 }}</td>
+                        <td>{{ data.pay_amt4 }}</td>
+                        <td>{{ data.pay_amt5 }}</td>
+                        <td>{{ data.pay_amt6 }}</td>
+                        <td>{{ data.age }}</td>
+                        <td>{{ data.limit_bal }}</td>
+                        <td>{{ data.classification }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

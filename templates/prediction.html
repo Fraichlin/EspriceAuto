@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block activation2 %}active{% endblock %}
+{% block main %}
+<!-- Modal --><br>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog text-dark" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Prediction Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Prediction Input</h5>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                        Mark : <span id="mk"></span>
+                    </div>
+                    <div class="col-xl-6">
+                        Model : <span id="md"></span>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                        Year : <span id="yr"></span>
+                    </div>
+                    <div class="col-xl-6">
+                        Mileage : <span id="ml"></span>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                        Power : <span id="pw"></span>
+                    </div>
+                    <div class="col-xl-6">
+                        Energy : <span id="en"></span>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                        Gearbox : <span id="gx"></span>
+                    </div>
+                    <div class="col-xl-6">
+                        Color : <span id="cl"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <h5 class="pt-3">Price Prediction (TND)</h5>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                       Estimated price : <span id="prediction"></span>
+                    </div>
+                    <div class="col-xl-6">
+                        Min price : <span id="min_price"></span>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xl-6">
+                        Max price : <span id="max_price"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <h5 class="pt-3">Matching car ads</h5>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="card" style="width: 30rem;">
+                      <ul id="ads" class="list-group list-group-flush">
+                      </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a class="btn btn-primary" href="/statistics" role="button">View statistics</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Enter your car informations</h2>
+    <form action="" id="post-form">
+        {% csrf_token %}
+        <div class="form-group row">
+            <div class="col-xl-5">
+                <label for="mark">Mark</label>
+                <input type="text" id="mark" list="mark_datalist" class="form-control" required>
+                <datalist id="mark_datalist" >
+                    {% for m in marks %}
+                    <option value='{{ m }}'>{{ m }}</option>>
+                    {% endfor %}
+                </datalist>
+            </div>
+            <div class="col-xl-5">
+                <label for="model">Model</label>
+                <input type="text" id="model" list="model_datalist" class="form-control" required>
+                <datalist id="model_datalist" >
+                </datalist>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xl-5">
+                <label for="year">Year</label>
+                <input type="text" id="year" list="year_datalist" value="none" class="form-control" required>
+                <datalist id="year_datalist" >
+                    <option value="none">none</option>
+                    {% for y in years %}
+                    <option value='{{ y }}'>{{ y }}</option>
+                    {% endfor %}
+                </datalist>
+            </div>
+            <div class="col-xl-5">
+                <label for="mileage">Mileage (KM)</label>
+                <input type="text" step="1"  class="form-control" id="mileage" value="none" placeholder="">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xl-5">
+                <label for="power">Power (CV)</label>
+                <input type="text" step="1"  class="form-control" id="power" value="none" placeholder="" >
+            </div>
+            <div class="col-xl-5">
+                <label for="energy">Energy</label>
+                <select id="energy" class="form-control">
+                    <option value="none">none</option>
+                    <option value="gasoline">Gasoline</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xl-5">
+                <label for="gearbox">Gearbox</label>
+                <select id="gearbox" class="form-control">
+                    <option value="none">none</option>
+                  <option value="manual">Manual</option>
+                  <option value="automatic">Automatic</option>
+                    <option value="semi_auto">Semi auto</option>
+                </select>
+            </div>
+            <div class="col-xl-5">
+                <label for="color">Color</label>
+                <input type="text" id="color" list="color_datalist" value="none" class="form-control">
+                <datalist id="color_datalist" >
+                    {% for c in colors %}
+                        <option value='{{ c }}'>
+                    {% endfor %}
+                </datalist>
+            </div>
+        </div>
+
+        <button type="submit" value="Submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Get price</button>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block activation4 %}active{% endblock %}
+{% block main %}
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mb-5">Enter your search</h1>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                   <input id="searchbar" onkeyup="search_animal()" type="text" name="search" class="form-control border-light" style="padding: 30px;" placeholder="Keyword">			
+				                    
+<div class="input-group-append">
+                        <button class="btn btn-primary px-3">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+ <!--  Quote Request Start -->
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h6 class="text-primary text-uppercase font-weight-bold">Mark Cars</h6>
+                   
+                    <div class="row">
+                        
+                      <ol id='list'>
+        <li class="animals"> Bmw </li>
+        <li class="animals">Audit</li>
+        <li class="animals">Mercades</li>
+        <li class="animals">Dacia</li>
+        <li class="animals">Hyundai</li>
+        <li class="animals">Suzuki</li>
+        <li class="animals">Tesla</li>
+        <li class="animals">Chery</li>
+        <li class="animals">Hino</li>
+        <li class="animals">Kamaz</li>
+        <li class="animals">Acura</li>
+                      </ol></div>
+                </div>
+            </div>
+        </div></div>
+{% endblock %}
+
