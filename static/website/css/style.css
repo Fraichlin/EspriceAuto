@@ -9704,3 +9704,7 @@ p,
   padding: 0;
   list-style-type: none;
 }
+
+.item_info , .list-group-item{
+    color: orange;
+}
